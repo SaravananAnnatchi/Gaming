@@ -1,4 +1,4 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/java/Features/defaultSlotMachine.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("defaultSlotMachine.feature");
 formatter.feature({
   "line": 1,
   "name": "Default Slot machine automation",
@@ -7,7 +7,7 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 11103999744,
+  "duration": 11221218327,
   "status": "passed"
 });
 formatter.scenario({
@@ -78,14 +78,14 @@ formatter.match({
   "location": "slotMachineStepDefs.launchTheSlotMachineSite()"
 });
 formatter.result({
-  "duration": 810521082,
+  "duration": 879121939,
   "status": "passed"
 });
 formatter.match({
   "location": "slotMachineStepDefs.verifyTheDefaultValuesOfWinChart(DataTable)"
 });
 formatter.result({
-  "duration": 511512177,
+  "duration": 587073837,
   "status": "passed"
 });
 formatter.match({
@@ -98,21 +98,21 @@ formatter.match({
   "location": "slotMachineStepDefs.verifyTheSlotMachineContainsReels(int)"
 });
 formatter.result({
-  "duration": 25328758,
+  "duration": 20671950,
   "status": "passed"
 });
 formatter.match({
   "location": "slotMachineStepDefs.verifyTheLastWinIsByDefaultBlank()"
 });
 formatter.result({
-  "duration": 69176856,
+  "duration": 74227100,
   "status": "passed"
 });
 formatter.match({
   "location": "slotMachineStepDefs.verifyTheCreditsPresent()"
 });
 formatter.result({
-  "duration": 47388602,
+  "duration": 43964610,
   "status": "passed"
 });
 formatter.match({
@@ -125,29 +125,29 @@ formatter.match({
   "location": "slotMachineStepDefs.verityTheBetIsByDefaultSelectAs(int)"
 });
 formatter.result({
-  "duration": 62604974,
+  "duration": 68279216,
   "status": "passed"
 });
 formatter.match({
   "location": "slotMachineStepDefs.verifyTheBetUpAndDownButton()"
 });
 formatter.result({
-  "duration": 66762092,
+  "duration": 69138291,
   "status": "passed"
 });
 formatter.match({
   "location": "slotMachineStepDefs.verifyTheSpinButtonIsPresent()"
 });
 formatter.result({
-  "duration": 34886888,
+  "duration": 42931997,
   "status": "passed"
 });
 formatter.after({
-  "duration": 779248544,
+  "duration": 794819377,
   "status": "passed"
 });
 formatter.before({
-  "duration": 11543137535,
+  "duration": 9818656447,
   "status": "passed"
 });
 formatter.scenario({
@@ -213,14 +213,14 @@ formatter.match({
   "location": "slotMachineStepDefs.launchTheSlotMachineSite()"
 });
 formatter.result({
-  "duration": 185737389,
+  "duration": 195098186,
   "status": "passed"
 });
 formatter.match({
   "location": "slotMachineStepDefs.verifyTheDefaultValuesOfWinChart(DataTable)"
 });
 formatter.result({
-  "duration": 888378531,
+  "duration": 1036778576,
   "status": "passed"
 });
 formatter.match({
@@ -233,7 +233,7 @@ formatter.match({
   "location": "slotMachineStepDefs.iIncreaseTheBetTo(int)"
 });
 formatter.result({
-  "duration": 229851332,
+  "duration": 236314085,
   "status": "passed"
 });
 formatter.match({
@@ -246,7 +246,7 @@ formatter.match({
   "location": "slotMachineStepDefs.verifyThePricesForBet(int)"
 });
 formatter.result({
-  "duration": 198153,
+  "duration": 239999,
   "status": "passed"
 });
 formatter.match({
@@ -259,7 +259,7 @@ formatter.match({
   "location": "slotMachineStepDefs.iIncreaseTheBetTo(int)"
 });
 formatter.result({
-  "duration": 666866050,
+  "duration": 595732277,
   "status": "passed"
 });
 formatter.match({
@@ -272,22 +272,22 @@ formatter.match({
   "location": "slotMachineStepDefs.verifyThePricesForBet(int)"
 });
 formatter.result({
-  "duration": 104205,
+  "duration": 106257,
   "status": "passed"
 });
 formatter.match({
   "location": "slotMachineStepDefs.verifyTheBetCanTBeIncreasedAnymore()"
 });
 formatter.result({
-  "duration": 161136834,
+  "duration": 167957330,
   "status": "passed"
 });
 formatter.after({
-  "duration": 832049234,
+  "duration": 804513301,
   "status": "passed"
 });
 formatter.before({
-  "duration": 9836615787,
+  "duration": 9641999240,
   "status": "passed"
 });
 formatter.scenario({
@@ -358,14 +358,14 @@ formatter.match({
   "location": "slotMachineStepDefs.launchTheSlotMachineSite()"
 });
 formatter.result({
-  "duration": 157446177,
+  "duration": 183263959,
   "status": "passed"
 });
 formatter.match({
   "location": "slotMachineStepDefs.verifyTheDefaultValuesOfWinChart(DataTable)"
 });
 formatter.result({
-  "duration": 1013303762,
+  "duration": 1095809816,
   "status": "passed"
 });
 formatter.match({
@@ -378,7 +378,7 @@ formatter.match({
   "location": "slotMachineStepDefs.iIncreaseTheBetTo(int)"
 });
 formatter.result({
-  "duration": 640997397,
+  "duration": 631305934,
   "status": "passed"
 });
 formatter.match({
@@ -391,7 +391,7 @@ formatter.match({
   "location": "slotMachineStepDefs.iDecreaseTheBetTo(int)"
 });
 formatter.result({
-  "duration": 425133723,
+  "duration": 480930509,
   "status": "passed"
 });
 formatter.match({
@@ -404,7 +404,7 @@ formatter.match({
   "location": "slotMachineStepDefs.verifyThePricesForBet(int)"
 });
 formatter.result({
-  "duration": 102563,
+  "duration": 104205,
   "status": "passed"
 });
 formatter.match({
@@ -417,7 +417,7 @@ formatter.match({
   "location": "slotMachineStepDefs.iDecreaseTheBetTo(int)"
 });
 formatter.result({
-  "duration": 335867481,
+  "duration": 333652512,
   "status": "passed"
 });
 formatter.match({
@@ -430,22 +430,22 @@ formatter.match({
   "location": "slotMachineStepDefs.verifyThePricesForBet(int)"
 });
 formatter.result({
-  "duration": 138666,
+  "duration": 304409,
   "status": "passed"
 });
 formatter.match({
   "location": "slotMachineStepDefs.verifyTheBetCanTBeDecreasedAnymore()"
 });
 formatter.result({
-  "duration": 112817363,
+  "duration": 131984085,
   "status": "passed"
 });
 formatter.after({
-  "duration": 809502008,
+  "duration": 804730327,
   "status": "passed"
 });
 formatter.before({
-  "duration": 9684050829,
+  "duration": 10088306655,
   "status": "passed"
 });
 formatter.scenario({
@@ -480,21 +480,21 @@ formatter.match({
   "location": "slotMachineStepDefs.launchTheSlotMachineSite()"
 });
 formatter.result({
-  "duration": 187974922,
+  "duration": 228490925,
   "status": "passed"
 });
 formatter.match({
   "location": "slotMachineStepDefs.CollectTheBetAndTotalSpinValues()"
 });
 formatter.result({
-  "duration": 174064802,
+  "duration": 596116687,
   "status": "passed"
 });
 formatter.match({
   "location": "slotMachineStepDefs.ClickOnSpinButtonAndVerifyTheResult()"
 });
 formatter.result({
-  "duration": 222358017,
+  "duration": 211477634,
   "status": "passed"
 });
 formatter.match({
@@ -507,15 +507,15 @@ formatter.match({
   "location": "slotMachineStepDefs.verifyTheResult(int)"
 });
 formatter.result({
-  "duration": 5312930922,
+  "duration": 5181697604,
   "status": "passed"
 });
 formatter.after({
-  "duration": 760941717,
+  "duration": 841613518,
   "status": "passed"
 });
 formatter.before({
-  "duration": 9745615396,
+  "duration": 9697326284,
   "status": "passed"
 });
 formatter.scenario({
@@ -555,7 +555,7 @@ formatter.match({
   "location": "slotMachineStepDefs.launchTheSlotMachineSite()"
 });
 formatter.result({
-  "duration": 186349490,
+  "duration": 247085340,
   "status": "passed"
 });
 formatter.match({
@@ -568,21 +568,21 @@ formatter.match({
   "location": "slotMachineStepDefs.iIncreaseTheBetTo(int)"
 });
 formatter.result({
-  "duration": 1185042826,
+  "duration": 1134358233,
   "status": "passed"
 });
 formatter.match({
   "location": "slotMachineStepDefs.CollectTheBetAndTotalSpinValues()"
 });
 formatter.result({
-  "duration": 114567102,
+  "duration": 131468394,
   "status": "passed"
 });
 formatter.match({
   "location": "slotMachineStepDefs.ClickOnSpinButtonAndVerifyTheResult()"
 });
 formatter.result({
-  "duration": 199822278,
+  "duration": 220515150,
   "status": "passed"
 });
 formatter.match({
@@ -595,11 +595,11 @@ formatter.match({
   "location": "slotMachineStepDefs.verifyTheResult(int)"
 });
 formatter.result({
-  "duration": 5165448208,
+  "duration": 16888544275,
   "status": "passed"
 });
 formatter.after({
-  "duration": 805567248,
+  "duration": 775985372,
   "status": "passed"
 });
 });
