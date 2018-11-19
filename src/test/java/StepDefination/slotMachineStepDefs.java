@@ -135,9 +135,16 @@ public class slotMachineStepDefs extends BaseClass {
     @Then("^Verify the prices for bet (\\d+)$")
     public void verifyThePricesForBet(int newBet) {
         ArrayList<Integer> newPrices = spinSlotMachine.spinUpAndDownButtonValidation(prices, newBet);
+        ArrayList<Integer> pricesWithBet = new ArrayList<Integer>();
         int totalPriceColumns = newPrices.size();
         Assert.assertEquals(9, totalPriceColumns);
-        int price1 = newPrices.get(0);
+        for (int i = 0; i < prices.size(); i++) {
+            int value = prices.get(i) * newBet;
+            pricesWithBet.add(i, value);
+        }
+
+        Assert.assertEquals(pricesWithBet, newPrices);
+     /*   int price1 = newPrices.get(0);
         Assert.assertEquals(prices.get(0) * newBet, price1);
         int price2 = newPrices.get(1);
         Assert.assertEquals(prices.get(1) * newBet, price2);
@@ -154,7 +161,7 @@ public class slotMachineStepDefs extends BaseClass {
         int price8 = newPrices.get(7);
         Assert.assertEquals(prices.get(7) * newBet, price8);
         int price9 = newPrices.get(8);
-        Assert.assertEquals(prices.get(8) * newBet, price9);
+        Assert.assertEquals(prices.get(8) * newBet, price9);*/
     }
 
     @And("^verify the bet can't be increased anymore$")
