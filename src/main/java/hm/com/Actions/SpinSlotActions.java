@@ -57,158 +57,167 @@ public class SpinSlotActions extends BaseClass {
         PageFactory.initElements(driver, this);
     }
 
-    public void actualMatch(String reel1Match, String reel2Match, String reel3Match, int betting, int beforeSpinCredit) throws InterruptedException {
-        Thread.sleep(3000);
-        int afterSpinCredit = Integer.parseInt(credits.getText());
+    public void actualMatch(String reel1Match, String reel2Match, String reel3Match, int betting, int beforeSpinCredit) {
+        // Thread.sleep(10000);
+        //  int afterSpinCredit = Integer.parseInt(credits.getText());
+        int afterSpinCredit = beforeSpinCredit - betting;
         if (reel1Match.equals("Seven") && reel2Match.equals("Seven") && reel3Match.equals("Seven")) {
-            sevenWon(afterSpinCredit, betting, beforeSpinCredit);
+            sevenWon(afterSpinCredit);
         } else if (reel1Match.equals("Watermelon") && reel2Match.equals("Watermelon") && reel3Match.equals("Watermelon")) {
-            waterMelonWon(afterSpinCredit, betting, beforeSpinCredit);
+            waterMelonWon(afterSpinCredit);
 
         } else if (reel1Match.equals("Plum") && reel2Match.equals("Plum") && reel3Match.equals("Plum")) {
-            plumWon(afterSpinCredit, betting, beforeSpinCredit);
+            plumWon(afterSpinCredit);
 
         } else if (reel1Match.equals("Bar") && reel2Match.equals("Bar") && reel3Match.equals("Bar")) {
-            barWon(afterSpinCredit, betting, beforeSpinCredit);
+            barWon(afterSpinCredit);
 
         } else if (reel1Match.equals("BigWin") && reel2Match.equals("BigWin") && reel3Match.equals("BigWin")) {
-            bigWinWon(afterSpinCredit, betting, beforeSpinCredit);
+            bigWinWon(afterSpinCredit);
 
         } else if (reel1Match.equals("Banana") && reel2Match.equals("Banana") && reel3Match.equals("Banana")) {
-            bananaWon(afterSpinCredit, betting, beforeSpinCredit);
+            bananaWon(afterSpinCredit);
 
         } else if (reel1Match.equals("Blank") && reel2Match.equals("Blank") && reel3Match.equals("Blank")) {
-            blankWon(afterSpinCredit, betting, beforeSpinCredit);
+            blankWon(afterSpinCredit);
 
         } else if (((reel1Match.equals("Watermelon")) || (reel1Match.equals("Banana")))
                 && ((reel2Match.equals("Plum")) || (reel2Match.equals("Seven")))
                 && ((reel3Match.equals("Bar")) || (reel3Match.equals("BigWin")))) {
-            mixOfTwoWon(afterSpinCredit, betting, beforeSpinCredit);
+            mixOfTwoWon(afterSpinCredit);
 
         } else if (((reel1Match.equals("Watermelon")) || (reel1Match.equals("Banana")) || (reel1Match.equals("Plum")))
                 && ((reel2Match.equals("Watermelon")) || (reel2Match.equals("Banana")) || (reel2Match.equals("Plum")))
                 && ((reel3Match.equals("Watermelon")) || (reel3Match.equals("Banana")) || (reel3Match.equals("Plum")))) {
-            mixOfThreeWon(afterSpinCredit, betting, beforeSpinCredit);
+            mixOfThreeWon(afterSpinCredit);
 
         } else {
-            noWin(afterSpinCredit, betting, beforeSpinCredit);
+            noWin(afterSpinCredit);
         }
 
     }
 
-    public void sevenWon(int afterSpinCredit, int betting, int beforeSpinCredit) {
+    public void sevenWon(int afterSpinCredit) {
         int winAmount = Integer.parseInt(sevenPrice.getText());
-        explicitWaitTextToBePresent(lastWin,sevenPrice.getText());
+        explicitWaitTextToBePresent(lastWin, sevenPrice.getText());
         int lastWinAmount = Integer.parseInt(lastWin.getText());
         Assert.assertEquals(winAmount, lastWinAmount);
-        totalCredits = beforeSpinCredit + winAmount - betting;
-        Assert.assertEquals(totalCredits, afterSpinCredit);
+        totalCredits = afterSpinCredit + winAmount;
+        explicitWaitTextToBePresent(credits, Integer.toString(totalCredits));
+        int currentCredit = Integer.parseInt(credits.getText());
+        Assert.assertEquals(totalCredits, currentCredit);
         boolean wonMessage = sevenWon.getAttribute("class").contains("won");
         Assert.assertTrue(wonMessage);
-        System.out.println("reached seven");
     }
 
-    public void waterMelonWon(int afterSpinCredit, int betting, int beforeSpinCredit) {
+    public void waterMelonWon(int afterSpinCredit) {
         int winAmount = Integer.parseInt(watermelonPrice.getText());
-        explicitWaitTextToBePresent(lastWin,watermelonPrice.getText());
+        explicitWaitTextToBePresent(lastWin, watermelonPrice.getText());
         int lastWinAmount = Integer.parseInt(lastWin.getText());
         Assert.assertEquals(winAmount, lastWinAmount);
-        totalCredits = beforeSpinCredit + winAmount - betting;
-        Assert.assertEquals(totalCredits, afterSpinCredit);
+        totalCredits = afterSpinCredit + winAmount;
+        explicitWaitTextToBePresent(credits, Integer.toString(totalCredits));
+        int currentCredit = Integer.parseInt(credits.getText());
+        Assert.assertEquals(totalCredits, currentCredit);
         boolean wonMessage = watermelonWon.getAttribute("class").contains("won");
         Assert.assertTrue(wonMessage);
-        System.out.println("reached watermelon");
     }
 
-    public void plumWon(int afterSpinCredit, int betting, int beforeSpinCredit) {
+    public void plumWon(int afterSpinCredit) {
         int winAmount = Integer.parseInt(plumPrice.getText());
-        explicitWaitTextToBePresent(lastWin,plumPrice.getText());
+        explicitWaitTextToBePresent(lastWin, plumPrice.getText());
         int lastWinAmount = Integer.parseInt(lastWin.getText());
         Assert.assertEquals(winAmount, lastWinAmount);
-        totalCredits = beforeSpinCredit + winAmount - betting;
-        Assert.assertEquals(totalCredits, afterSpinCredit);
+        totalCredits = afterSpinCredit + winAmount;
+        explicitWaitTextToBePresent(credits, Integer.toString(totalCredits));
+        int currentCredit = Integer.parseInt(credits.getText());
+        Assert.assertEquals(totalCredits, currentCredit);
         boolean wonMessage = plumWon.getAttribute("class").contains("won");
         Assert.assertTrue(wonMessage);
-        System.out.println("reached plum");
     }
 
-    public void barWon(int afterSpinCredit, int betting, int beforeSpinCredit) {
+    public void barWon(int afterSpinCredit) {
         int winAmount = Integer.parseInt(barPrice.getText());
-        explicitWaitTextToBePresent(lastWin,barPrice.getText());
+        explicitWaitTextToBePresent(lastWin, barPrice.getText());
         int lastWinAmount = Integer.parseInt(lastWin.getText());
         Assert.assertEquals(winAmount, lastWinAmount);
-        totalCredits = beforeSpinCredit + winAmount - betting;
-        Assert.assertEquals(totalCredits, afterSpinCredit);
+        totalCredits = afterSpinCredit + winAmount;
+        explicitWaitTextToBePresent(credits, Integer.toString(totalCredits));
+        int currentCredit = Integer.parseInt(credits.getText());
+        Assert.assertEquals(totalCredits, currentCredit);
         boolean wonMessage = barbarWon.getAttribute("class").contains("won");
         Assert.assertTrue(wonMessage);
-        System.out.println("reached barbar");
     }
 
-    public void bigWinWon(int afterSpinCredit, int betting, int beforeSpinCredit) {
+    public void bigWinWon(int afterSpinCredit) {
         int winAmount = Integer.parseInt(bigWinPrice.getText());
-        explicitWaitTextToBePresent(lastWin,bigWinPrice.getText());
+        explicitWaitTextToBePresent(lastWin, bigWinPrice.getText());
         int lastWinAmount = Integer.parseInt(lastWin.getText());
         Assert.assertEquals(winAmount, lastWinAmount);
-        totalCredits = beforeSpinCredit + winAmount - betting;
-        Assert.assertEquals(totalCredits, afterSpinCredit);
+        totalCredits = afterSpinCredit + winAmount;
+        explicitWaitTextToBePresent(credits, Integer.toString(totalCredits));
+        int currentCredit = Integer.parseInt(credits.getText());
+        Assert.assertEquals(totalCredits, currentCredit);
         boolean wonMessage = bigWinWon.getAttribute("class").contains("won");
         Assert.assertTrue(wonMessage);
-        System.out.println("reached bigwin");
     }
 
-    public void bananaWon(int afterSpinCredit, int betting, int beforeSpinCredit) {
+    public void bananaWon(int afterSpinCredit) {
         int winAmount = Integer.parseInt(bananaPrice.getText());
-        explicitWaitTextToBePresent(lastWin,bananaPrice.getText());
+        explicitWaitTextToBePresent(lastWin, bananaPrice.getText());
         int lastWinAmount = Integer.parseInt(lastWin.getText());
         Assert.assertEquals(winAmount, lastWinAmount);
-        totalCredits = beforeSpinCredit + winAmount - betting;
-        Assert.assertEquals(totalCredits, afterSpinCredit);
+        totalCredits = afterSpinCredit + winAmount;
+        explicitWaitTextToBePresent(credits, Integer.toString(totalCredits));
+        int currentCredit = Integer.parseInt(credits.getText());
+        Assert.assertEquals(totalCredits, currentCredit);
         boolean wonMessage = bananaWon.getAttribute("class").contains("won");
         Assert.assertTrue(wonMessage);
-        System.out.println("reached banana");
     }
 
-    public void blankWon(int afterSpinCredit, int betting, int beforeSpinCredit) {
+    public void blankWon(int afterSpinCredit) {
         int winAmount = Integer.parseInt(blankPrice.getText());
-        explicitWaitTextToBePresent(lastWin,blankPrice.getText());
+        explicitWaitTextToBePresent(lastWin, blankPrice.getText());
         int lastWinAmount = Integer.parseInt(lastWin.getText());
         Assert.assertEquals(winAmount, lastWinAmount);
-        totalCredits = beforeSpinCredit + winAmount - betting;
-        Assert.assertEquals(totalCredits, afterSpinCredit);
+        totalCredits = afterSpinCredit + winAmount;
+        explicitWaitTextToBePresent(credits, Integer.toString(totalCredits));
+        int currentCredit = Integer.parseInt(credits.getText());
+        Assert.assertEquals(totalCredits, currentCredit);
         boolean wonMessage = blankWon.getAttribute("class").contains("won");
         Assert.assertTrue(wonMessage);
-        System.out.println("reached blank");
     }
 
-    public void mixOfTwoWon(int afterSpinCredit, int betting, int beforeSpinCredit) {
+    public void mixOfTwoWon(int afterSpinCredit) {
         int winAmount = Integer.parseInt(twoMixPrice.getText());
-        explicitWaitTextToBePresent(lastWin,twoMixPrice.getText());
+        explicitWaitTextToBePresent(lastWin, twoMixPrice.getText());
         int lastWinAmount = Integer.parseInt(lastWin.getText());
         Assert.assertEquals(winAmount, lastWinAmount);
-        totalCredits = beforeSpinCredit + winAmount - betting;
-        Assert.assertEquals(totalCredits, afterSpinCredit);
+        totalCredits = afterSpinCredit + winAmount;
+        explicitWaitTextToBePresent(credits, Integer.toString(totalCredits));
+        int currentCredit = Integer.parseInt(credits.getText());
+        Assert.assertEquals(totalCredits, currentCredit);
         boolean wonMessage = twoMixWon.getAttribute("class").contains("won");
         Assert.assertTrue(wonMessage);
-        System.out.println("reached 2mix");
     }
 
-    public void mixOfThreeWon(int afterSpinCredit, int betting, int beforeSpinCredit) {
+    public void mixOfThreeWon(int afterSpinCredit) {
         int winAmount = Integer.parseInt(threeMixPrice.getText());
-        explicitWaitTextToBePresent(lastWin,threeMixPrice.getText());
+        explicitWaitTextToBePresent(lastWin, threeMixPrice.getText());
         int lastWinAmount = Integer.parseInt(lastWin.getText());
         Assert.assertEquals(winAmount, lastWinAmount);
-        totalCredits = (beforeSpinCredit + winAmount) - betting;
-        Assert.assertEquals(totalCredits, afterSpinCredit);
+        totalCredits = afterSpinCredit + winAmount;
+        explicitWaitTextToBePresent(credits, Integer.toString(totalCredits));
+        int currentCredit = Integer.parseInt(credits.getText());
+        Assert.assertEquals(totalCredits, currentCredit);
         boolean wonMessage = threeMixWon.getAttribute("class").contains("won");
         Assert.assertTrue(wonMessage);
-        System.out.println("reached 3mix");
     }
 
-    public void noWin(int afterSpinCredit, int betting, int beforeSpinCredit) {
+    public void noWin(int afterSpinCredit) {
         String lastWinMessage = lastWin.getText();
         Assert.assertEquals("", lastWinMessage);
-        totalCredits = beforeSpinCredit - betting;
-        Assert.assertEquals(totalCredits, afterSpinCredit);
-        System.out.println("Better luck next time");
+        int currentCredit = Integer.parseInt(credits.getText());
+        Assert.assertEquals(afterSpinCredit, currentCredit);
     }
 }
