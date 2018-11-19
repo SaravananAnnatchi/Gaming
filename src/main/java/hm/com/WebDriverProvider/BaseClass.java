@@ -56,10 +56,4 @@ public class BaseClass {
         WebDriverWait wait = new WebDriverWait(driver, 40);
         wait.until(ExpectedConditions.elementToBeClickable(element));
     }
-
-    public void explicitWaitTextToBePresent(WebElement element,String text) {
-        WebDriverWait wait = new WebDriverWait(driver, 60);
-        wait.until(ExpectedConditions.textToBePresentInElementValue(element,text));
-    }
-
 }

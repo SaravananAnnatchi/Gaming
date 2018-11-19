@@ -3,7 +3,7 @@ Feature: Default Slot machine automation
   Scenario: Verify the default values
     Given I am on slot machine site
     Then Verify the default price values of Win Chart
-      |200  |50 |20 |16 |15 |14 |12 |7  |4  |
+      | 200 | 50 | 20 | 16 | 15 | 14 | 12 | 7 | 4 |
     And Verify the slot machine contains 3 reels
     And Verify the last win is by default blank
     And Verify the total win is present
@@ -15,7 +15,7 @@ Feature: Default Slot machine automation
   Scenario: Verify the increase in bet, increases the prices in the list
     Given I am on slot machine site
     Then Verify the default price values of Win Chart
-      |200  |50 |20 |16 |15 |14 |12 |7  |4  |
+      | 200 | 50 | 20 | 16 | 15 | 14 | 12 | 7 | 4 |
     When I increase the bet to 3
     Then Verify the prices for bet 3
     And I increase the bet to 10
@@ -25,7 +25,7 @@ Feature: Default Slot machine automation
   Scenario: Verify the decrease in bet, decreases the prices in the list
     Given I am on slot machine site
     Then Verify the default price values of Win Chart
-      |200  |50 |20 |16 |15 |14 |12 |7  |4  |
+      | 200 | 50 | 20 | 16 | 15 | 14 | 12 | 7 | 4 |
     When I increase the bet to 10
     And I decrease the bet to 5
     Then Verify the prices for bet 5

@@ -1,4 +1,4 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("C:/NetEnt/src/test/java/Features/defaultSlotMachine.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/java/Features/defaultSlotMachine.feature");
 formatter.feature({
   "line": 1,
   "name": "Default Slot machine automation",
@@ -7,7 +7,7 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 10903546904,
+  "duration": 11103999744,
   "status": "passed"
 });
 formatter.scenario({
@@ -78,14 +78,14 @@ formatter.match({
   "location": "slotMachineStepDefs.launchTheSlotMachineSite()"
 });
 formatter.result({
-  "duration": 809260777,
+  "duration": 810521082,
   "status": "passed"
 });
 formatter.match({
   "location": "slotMachineStepDefs.verifyTheDefaultValuesOfWinChart(DataTable)"
 });
 formatter.result({
-  "duration": 571836952,
+  "duration": 511512177,
   "status": "passed"
 });
 formatter.match({
@@ -98,21 +98,21 @@ formatter.match({
   "location": "slotMachineStepDefs.verifyTheSlotMachineContainsReels(int)"
 });
 formatter.result({
-  "duration": 26907421,
+  "duration": 25328758,
   "status": "passed"
 });
 formatter.match({
   "location": "slotMachineStepDefs.verifyTheLastWinIsByDefaultBlank()"
 });
 formatter.result({
-  "duration": 81342569,
+  "duration": 69176856,
   "status": "passed"
 });
 formatter.match({
   "location": "slotMachineStepDefs.verifyTheCreditsPresent()"
 });
 formatter.result({
-  "duration": 38100009,
+  "duration": 47388602,
   "status": "passed"
 });
 formatter.match({
@@ -125,29 +125,29 @@ formatter.match({
   "location": "slotMachineStepDefs.verityTheBetIsByDefaultSelectAs(int)"
 });
 formatter.result({
-  "duration": 69019728,
+  "duration": 62604974,
   "status": "passed"
 });
 formatter.match({
   "location": "slotMachineStepDefs.verifyTheBetUpAndDownButton()"
 });
 formatter.result({
-  "duration": 73094794,
+  "duration": 66762092,
   "status": "passed"
 });
 formatter.match({
   "location": "slotMachineStepDefs.verifyTheSpinButtonIsPresent()"
 });
 formatter.result({
-  "duration": 45689323,
+  "duration": 34886888,
   "status": "passed"
 });
 formatter.after({
-  "duration": 825803505,
+  "duration": 779248544,
   "status": "passed"
 });
 formatter.before({
-  "duration": 9433218626,
+  "duration": 11543137535,
   "status": "passed"
 });
 formatter.scenario({
@@ -213,14 +213,14 @@ formatter.match({
   "location": "slotMachineStepDefs.launchTheSlotMachineSite()"
 });
 formatter.result({
-  "duration": 203647909,
+  "duration": 185737389,
   "status": "passed"
 });
 formatter.match({
   "location": "slotMachineStepDefs.verifyTheDefaultValuesOfWinChart(DataTable)"
 });
 formatter.result({
-  "duration": 1035685246,
+  "duration": 888378531,
   "status": "passed"
 });
 formatter.match({
@@ -233,7 +233,7 @@ formatter.match({
   "location": "slotMachineStepDefs.iIncreaseTheBetTo(int)"
 });
 formatter.result({
-  "duration": 260218026,
+  "duration": 229851332,
   "status": "passed"
 });
 formatter.match({
@@ -246,7 +246,7 @@ formatter.match({
   "location": "slotMachineStepDefs.verifyThePricesForBet(int)"
 });
 formatter.result({
-  "duration": 163692,
+  "duration": 198153,
   "status": "passed"
 });
 formatter.match({
@@ -259,7 +259,7 @@ formatter.match({
   "location": "slotMachineStepDefs.iIncreaseTheBetTo(int)"
 });
 formatter.result({
-  "duration": 538720725,
+  "duration": 666866050,
   "status": "passed"
 });
 formatter.match({
@@ -272,22 +272,22 @@ formatter.match({
   "location": "slotMachineStepDefs.verifyThePricesForBet(int)"
 });
 formatter.result({
-  "duration": 91487,
+  "duration": 104205,
   "status": "passed"
 });
 formatter.match({
   "location": "slotMachineStepDefs.verifyTheBetCanTBeIncreasedAnymore()"
 });
 formatter.result({
-  "duration": 136217100,
+  "duration": 161136834,
   "status": "passed"
 });
 formatter.after({
-  "duration": 784019814,
+  "duration": 832049234,
   "status": "passed"
 });
 formatter.before({
-  "duration": 9718982025,
+  "duration": 9836615787,
   "status": "passed"
 });
 formatter.scenario({
@@ -358,14 +358,14 @@ formatter.match({
   "location": "slotMachineStepDefs.launchTheSlotMachineSite()"
 });
 formatter.result({
-  "duration": 188452869,
+  "duration": 157446177,
   "status": "passed"
 });
 formatter.match({
   "location": "slotMachineStepDefs.verifyTheDefaultValuesOfWinChart(DataTable)"
 });
 formatter.result({
-  "duration": 937527128,
+  "duration": 1013303762,
   "status": "passed"
 });
 formatter.match({
@@ -378,7 +378,7 @@ formatter.match({
   "location": "slotMachineStepDefs.iIncreaseTheBetTo(int)"
 });
 formatter.result({
-  "duration": 685382108,
+  "duration": 640997397,
   "status": "passed"
 });
 formatter.match({
@@ -391,7 +391,7 @@ formatter.match({
   "location": "slotMachineStepDefs.iDecreaseTheBetTo(int)"
 });
 formatter.result({
-  "duration": 382536904,
+  "duration": 425133723,
   "status": "passed"
 });
 formatter.match({
@@ -404,7 +404,7 @@ formatter.match({
   "location": "slotMachineStepDefs.verifyThePricesForBet(int)"
 });
 formatter.result({
-  "duration": 108718,
+  "duration": 102563,
   "status": "passed"
 });
 formatter.match({
@@ -417,7 +417,7 @@ formatter.match({
   "location": "slotMachineStepDefs.iDecreaseTheBetTo(int)"
 });
 formatter.result({
-  "duration": 344854946,
+  "duration": 335867481,
   "status": "passed"
 });
 formatter.match({
@@ -430,22 +430,22 @@ formatter.match({
   "location": "slotMachineStepDefs.verifyThePricesForBet(int)"
 });
 formatter.result({
-  "duration": 87384,
+  "duration": 138666,
   "status": "passed"
 });
 formatter.match({
   "location": "slotMachineStepDefs.verifyTheBetCanTBeDecreasedAnymore()"
 });
 formatter.result({
-  "duration": 137923763,
+  "duration": 112817363,
   "status": "passed"
 });
 formatter.after({
-  "duration": 773454917,
+  "duration": 809502008,
   "status": "passed"
 });
 formatter.before({
-  "duration": 10286202372,
+  "duration": 9684050829,
   "status": "passed"
 });
 formatter.scenario({
@@ -480,21 +480,21 @@ formatter.match({
   "location": "slotMachineStepDefs.launchTheSlotMachineSite()"
 });
 formatter.result({
-  "duration": 220520893,
+  "duration": 187974922,
   "status": "passed"
 });
 formatter.match({
   "location": "slotMachineStepDefs.CollectTheBetAndTotalSpinValues()"
 });
 formatter.result({
-  "duration": 585088201,
+  "duration": 174064802,
   "status": "passed"
 });
 formatter.match({
   "location": "slotMachineStepDefs.ClickOnSpinButtonAndVerifyTheResult()"
 });
 formatter.result({
-  "duration": 208193128,
+  "duration": 222358017,
   "status": "passed"
 });
 formatter.match({
@@ -507,15 +507,15 @@ formatter.match({
   "location": "slotMachineStepDefs.verifyTheResult(int)"
 });
 formatter.result({
-  "duration": 5224518012,
+  "duration": 5312930922,
   "status": "passed"
 });
 formatter.after({
-  "duration": 812010719,
+  "duration": 760941717,
   "status": "passed"
 });
 formatter.before({
-  "duration": 9929414738,
+  "duration": 9745615396,
   "status": "passed"
 });
 formatter.scenario({
@@ -555,7 +555,7 @@ formatter.match({
   "location": "slotMachineStepDefs.launchTheSlotMachineSite()"
 });
 formatter.result({
-  "duration": 177343974,
+  "duration": 186349490,
   "status": "passed"
 });
 formatter.match({
@@ -568,21 +568,21 @@ formatter.match({
   "location": "slotMachineStepDefs.iIncreaseTheBetTo(int)"
 });
 formatter.result({
-  "duration": 1208231282,
+  "duration": 1185042826,
   "status": "passed"
 });
 formatter.match({
   "location": "slotMachineStepDefs.CollectTheBetAndTotalSpinValues()"
 });
 formatter.result({
-  "duration": 108994193,
+  "duration": 114567102,
   "status": "passed"
 });
 formatter.match({
   "location": "slotMachineStepDefs.ClickOnSpinButtonAndVerifyTheResult()"
 });
 formatter.result({
-  "duration": 197647923,
+  "duration": 199822278,
   "status": "passed"
 });
 formatter.match({
@@ -595,12 +595,11 @@ formatter.match({
   "location": "slotMachineStepDefs.verifyTheResult(int)"
 });
 formatter.result({
-  "duration": 5151585678,
-  "error_message": "java.lang.AssertionError: expected:\u003c564\u003e but was:\u003c507\u003e\r\n\tat org.junit.Assert.fail(Assert.java:88)\r\n\tat org.junit.Assert.failNotEquals(Assert.java:834)\r\n\tat org.junit.Assert.assertEquals(Assert.java:645)\r\n\tat org.junit.Assert.assertEquals(Assert.java:631)\r\n\tat hm.com.Actions.SpinSlotActions.mixOfThreeWon(SpinSlotActions.java:189)\r\n\tat hm.com.Actions.SpinSlotActions.actualMatch(SpinSlotActions.java:90)\r\n\tat StepDefination.slotMachineStepDefs.verifyTheResult(slotMachineStepDefs.java:69)\r\n\tat ✽.And Verify the result for bet 10(C:/NetEnt/src/test/java/Features/defaultSlotMachine.feature:47)\r\n",
-  "status": "failed"
+  "duration": 5165448208,
+  "status": "passed"
 });
 formatter.after({
-  "duration": 807469602,
+  "duration": 805567248,
   "status": "passed"
 });
 });

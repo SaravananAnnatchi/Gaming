@@ -1,5 +1,6 @@
 package hm.com.Actions;
 
+import hm.com.Pages.CommonPages;
 import hm.com.WebDriverProvider.BaseClass;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
@@ -9,6 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 public class SpinSlotActions extends BaseClass {
 
     public static int totalCredits;
+    CommonPages commonPages = new CommonPages();
 
     @FindBy(xpath = "//div[@id='trPrize_32']//span[@class='tdPayout']")
     WebElement bigWinPrice;
@@ -99,11 +101,11 @@ public class SpinSlotActions extends BaseClass {
 
     public void sevenWon(int afterSpinCredit) {
         int winAmount = Integer.parseInt(sevenPrice.getText());
-        explicitWaitTextToBePresent(lastWin, sevenPrice.getText());
+        commonPages.explicitWaitTextToBePresent(lastWin, sevenPrice.getText());
         int lastWinAmount = Integer.parseInt(lastWin.getText());
         Assert.assertEquals(winAmount, lastWinAmount);
         totalCredits = afterSpinCredit + winAmount;
-        explicitWaitTextToBePresent(credits, Integer.toString(totalCredits));
+        commonPages.explicitWaitTextToBePresent(credits, Integer.toString(totalCredits));
         int currentCredit = Integer.parseInt(credits.getText());
         Assert.assertEquals(totalCredits, currentCredit);
         boolean wonMessage = sevenWon.getAttribute("class").contains("won");
@@ -112,11 +114,11 @@ public class SpinSlotActions extends BaseClass {
 
     public void waterMelonWon(int afterSpinCredit) {
         int winAmount = Integer.parseInt(watermelonPrice.getText());
-        explicitWaitTextToBePresent(lastWin, watermelonPrice.getText());
+        commonPages.explicitWaitTextToBePresent(lastWin, watermelonPrice.getText());
         int lastWinAmount = Integer.parseInt(lastWin.getText());
         Assert.assertEquals(winAmount, lastWinAmount);
         totalCredits = afterSpinCredit + winAmount;
-        explicitWaitTextToBePresent(credits, Integer.toString(totalCredits));
+        commonPages.explicitWaitTextToBePresent(credits, Integer.toString(totalCredits));
         int currentCredit = Integer.parseInt(credits.getText());
         Assert.assertEquals(totalCredits, currentCredit);
         boolean wonMessage = watermelonWon.getAttribute("class").contains("won");
@@ -125,11 +127,11 @@ public class SpinSlotActions extends BaseClass {
 
     public void plumWon(int afterSpinCredit) {
         int winAmount = Integer.parseInt(plumPrice.getText());
-        explicitWaitTextToBePresent(lastWin, plumPrice.getText());
+        commonPages.explicitWaitTextToBePresent(lastWin, plumPrice.getText());
         int lastWinAmount = Integer.parseInt(lastWin.getText());
         Assert.assertEquals(winAmount, lastWinAmount);
         totalCredits = afterSpinCredit + winAmount;
-        explicitWaitTextToBePresent(credits, Integer.toString(totalCredits));
+        commonPages.explicitWaitTextToBePresent(credits, Integer.toString(totalCredits));
         int currentCredit = Integer.parseInt(credits.getText());
         Assert.assertEquals(totalCredits, currentCredit);
         boolean wonMessage = plumWon.getAttribute("class").contains("won");
@@ -138,11 +140,11 @@ public class SpinSlotActions extends BaseClass {
 
     public void barWon(int afterSpinCredit) {
         int winAmount = Integer.parseInt(barPrice.getText());
-        explicitWaitTextToBePresent(lastWin, barPrice.getText());
+        commonPages.explicitWaitTextToBePresent(lastWin, barPrice.getText());
         int lastWinAmount = Integer.parseInt(lastWin.getText());
         Assert.assertEquals(winAmount, lastWinAmount);
         totalCredits = afterSpinCredit + winAmount;
-        explicitWaitTextToBePresent(credits, Integer.toString(totalCredits));
+        commonPages.explicitWaitTextToBePresent(credits, Integer.toString(totalCredits));
         int currentCredit = Integer.parseInt(credits.getText());
         Assert.assertEquals(totalCredits, currentCredit);
         boolean wonMessage = barbarWon.getAttribute("class").contains("won");
@@ -151,11 +153,11 @@ public class SpinSlotActions extends BaseClass {
 
     public void bigWinWon(int afterSpinCredit) {
         int winAmount = Integer.parseInt(bigWinPrice.getText());
-        explicitWaitTextToBePresent(lastWin, bigWinPrice.getText());
+        commonPages.explicitWaitTextToBePresent(lastWin, bigWinPrice.getText());
         int lastWinAmount = Integer.parseInt(lastWin.getText());
         Assert.assertEquals(winAmount, lastWinAmount);
         totalCredits = afterSpinCredit + winAmount;
-        explicitWaitTextToBePresent(credits, Integer.toString(totalCredits));
+        commonPages.explicitWaitTextToBePresent(credits, Integer.toString(totalCredits));
         int currentCredit = Integer.parseInt(credits.getText());
         Assert.assertEquals(totalCredits, currentCredit);
         boolean wonMessage = bigWinWon.getAttribute("class").contains("won");
@@ -164,11 +166,11 @@ public class SpinSlotActions extends BaseClass {
 
     public void bananaWon(int afterSpinCredit) {
         int winAmount = Integer.parseInt(bananaPrice.getText());
-        explicitWaitTextToBePresent(lastWin, bananaPrice.getText());
+        commonPages.explicitWaitTextToBePresent(lastWin, bananaPrice.getText());
         int lastWinAmount = Integer.parseInt(lastWin.getText());
         Assert.assertEquals(winAmount, lastWinAmount);
         totalCredits = afterSpinCredit + winAmount;
-        explicitWaitTextToBePresent(credits, Integer.toString(totalCredits));
+        commonPages.explicitWaitTextToBePresent(credits, Integer.toString(totalCredits));
         int currentCredit = Integer.parseInt(credits.getText());
         Assert.assertEquals(totalCredits, currentCredit);
         boolean wonMessage = bananaWon.getAttribute("class").contains("won");
@@ -177,11 +179,11 @@ public class SpinSlotActions extends BaseClass {
 
     public void blankWon(int afterSpinCredit) {
         int winAmount = Integer.parseInt(blankPrice.getText());
-        explicitWaitTextToBePresent(lastWin, blankPrice.getText());
+        commonPages.explicitWaitTextToBePresent(lastWin, blankPrice.getText());
         int lastWinAmount = Integer.parseInt(lastWin.getText());
         Assert.assertEquals(winAmount, lastWinAmount);
         totalCredits = afterSpinCredit + winAmount;
-        explicitWaitTextToBePresent(credits, Integer.toString(totalCredits));
+        commonPages.explicitWaitTextToBePresent(credits, Integer.toString(totalCredits));
         int currentCredit = Integer.parseInt(credits.getText());
         Assert.assertEquals(totalCredits, currentCredit);
         boolean wonMessage = blankWon.getAttribute("class").contains("won");
@@ -190,11 +192,11 @@ public class SpinSlotActions extends BaseClass {
 
     public void mixOfTwoWon(int afterSpinCredit) {
         int winAmount = Integer.parseInt(twoMixPrice.getText());
-        explicitWaitTextToBePresent(lastWin, twoMixPrice.getText());
+        commonPages.explicitWaitTextToBePresent(lastWin, twoMixPrice.getText());
         int lastWinAmount = Integer.parseInt(lastWin.getText());
         Assert.assertEquals(winAmount, lastWinAmount);
         totalCredits = afterSpinCredit + winAmount;
-        explicitWaitTextToBePresent(credits, Integer.toString(totalCredits));
+        commonPages.explicitWaitTextToBePresent(credits, Integer.toString(totalCredits));
         int currentCredit = Integer.parseInt(credits.getText());
         Assert.assertEquals(totalCredits, currentCredit);
         boolean wonMessage = twoMixWon.getAttribute("class").contains("won");
@@ -203,11 +205,11 @@ public class SpinSlotActions extends BaseClass {
 
     public void mixOfThreeWon(int afterSpinCredit) {
         int winAmount = Integer.parseInt(threeMixPrice.getText());
-        explicitWaitTextToBePresent(lastWin, threeMixPrice.getText());
+        commonPages.explicitWaitTextToBePresent(lastWin, threeMixPrice.getText());
         int lastWinAmount = Integer.parseInt(lastWin.getText());
         Assert.assertEquals(winAmount, lastWinAmount);
         totalCredits = afterSpinCredit + winAmount;
-        explicitWaitTextToBePresent(credits, Integer.toString(totalCredits));
+        commonPages.explicitWaitTextToBePresent(credits, Integer.toString(totalCredits));
         int currentCredit = Integer.parseInt(credits.getText());
         Assert.assertEquals(totalCredits, currentCredit);
         boolean wonMessage = threeMixWon.getAttribute("class").contains("won");
